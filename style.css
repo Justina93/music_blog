@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400;500;700;800;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Sofia&display=swap");
+
+:root {
+  --mainColor: #bfc1c2;
+  --secondaryColor: #f2f3f4;
+
+  --borderColor: #c1c1c1;
+
+  --mainText: black;
+  --secondaryText: #4b5156;
+
+  --themeDotBorder: #24292e;
+
+  --previewBg: rgba(192, 192, 192, 0.2);
+  --previewShadow: #a9a9a9;
+
+  --h1firstColor: #0b62b4;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Arima Madurai", cursive;
+  font-size: 13.5px;
+  color: #000;
+  overflow-x: hidden;
+  font-weight: 800;
+  background-color: var(--secondaryColor);
+}
+
+#first {
+  color: var(--h1firstColor);
+  font-size: 48px;
+  font-family: "Sofia", cursive;
+}
+
+.section-1 {
+  background-color: var(--mainColor);
+  border-bottom: 1px solid var(--borderColor);
+}
+
+.main-container {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+.greeting {
+  display: grid;
+  text-align: center;
+  align-content: center;
+  min-height: 5rem;
+}
+
+.intro {
+  background-color: var(--secondaryColor);
+  border-radius: 5px 5px 0 0;
+
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3em 30em;
+  grid-template-areas:
+    "navbar navbar"
+    "left-column right-column";
+}
+
+.navbar {
+  border-radius: 5px 5px 0 0;
+  grid-area: navbar;
+  border-bottom: 1px solid var(--borderColor);
+  background-color: var(--mainColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar img {
+  width: 30px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#navigation {
+  margin: 0;
+  padding: 10px;
+}
+
+#navigation li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.left-column {
+  grid-area: left-column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 240px;
+}
+
+#profil-img {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 4px solid var(--mainColor);
+  border-radius: 50%;
+}
+
+#theme-options {
+  display: flex;
+  justify-content: center;
+  width: 135px;
+  margin-left: 85px;
+  background-color: var(--secondaryColor);
+}
+
+.theme-dot {
+  height: 20px;
+  width: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 4px;
+  border: 2px solid #000;
+  cursor: pointer;
+
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+}
+
+.theme-dot:hover {
+  border-width: 3px;
+}
+
+#light-mode {
+  background-color: #bfc1c2;
+}
+
+#blue-mode {
+  background-color: #3d5a76;
+}
+
+#green-mode {
+  background-color: #4c516d;
+}
+
+#purple-mode {
+  background-color: #563c5c;
+}
+
+
+/* SECTION 2 */
+.section-2 {
+  height: 100%;
+  padding-top: 40px;
+}
+
+.wrapper h1 {
+  margin: 0 0 0 0;
+}
+
+.wrapper p {
+  margin: 0 0 0 0;
+}
+
+.wrapper img {
+  width: 100%;
+}
+
+.wrapper {
+  display: grid;
+  padding-left: 40px;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: auto;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 750px;
+  overflow: hidden;
+}
+
+.drop-letter:first-child:first-letter {
+  color: var(--h1firstColor);
+  float: left;
+  font-family: "Arima Madurai", cursive;
+  font-size: 55px;
+  line-height: 35px;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-left: 3px;
+  text-shadow: -4px 2px black;
+}
+
+.panel-a {
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
+.panel-a img {
+  width: 170px;
+  padding-left: 150px;
+  transform: rotate(-10deg);
+}
+
+.panel-a figcaption {
+  font-weight: 100;
+  text-align: center;
+  font-size: 28px;
+  color: #000;
+  margin-left: 20px;
+  font-family: "Sofia", cursive;
+}
+
+.panel-b {
+  grid-row: 2;
+  grid-column: 1/2;
+}
+.panel-c {
+  grid-row: 2;
+  grid-column: 2/3;
+}
+.panel-d {
+  grid-row: 4/5;
+  grid-column: 1/2;
+}
+.panel-d img {
+  width: 100px;
+}
+
+.panel-e {
+  grid-row: 3/4;
+  grid-column: 1/3;
+}
+.panel-f {
+  grid-row: 4/5;
+  grid-column: 2/3;
+}
+.panel-g {
+  grid-row: 5;
+  grid-column: 1/2;
+}
+.panel-g img {
+  width: 180px;
+  padding-right: 110px;
+  transform: rotate(-15deg);
+}
+
+
+
+
+/* MEDIA QUERIES SECTION-1*/
+
+@media screen and (max-width: 1200px) {
+  .main-container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .intro {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav-wrapper"
+      "left-column"
+      "right-column";
+  }
+
+  .right-column {
+    justify-content: center;
+  }
+
+  .left-column {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #preview-shadow {
+    max-width: 280px;
+    height: 180px;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  #preview {
+    width: 280px;
+  }
+}
+
+
+/* MEDIA-QUERIES SECRION-2 */
+@media (min-width: 1090px) {
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 20px;
+    display: grid;
+    grid-gap: 20px;
+  }
+  .wrapper {
+    display: grid;
+    margin: 10px;
+    grid-template-columns: repeat(6, 12.5em);
+    grid-template-rows: repeat(10, 100px);
+  }
+
+  .panel {
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1 1 200px;
+  }
+
+  figcaption {
+    transform: rotate(-15deg);
+    font-size: 10px;
+    margin-bottom: 1px;
+    max-width: 520px;
+    font-weight: normal;
+    margin-left: -2em;
+    text-align: left;
+  }
+  .catepillar {
+    width: 100%;
+    margin-left: -2em;
+  }
+  .panel-a {
+    grid-row: 1/2;
+    grid-column: 1/4;
+    margin-bottom: 10px;
+  }
+  .panel-b {
+    grid-column: 1/2;
+    grid-row: 5;
+  }
+  .panel-c {
+    grid-column: 2/3;
+    grid-row: 5;
+  }
+
+  .panel-c img {
+    width: 120px;
+  }
+  .panel-c p:first-of-type {
+    margin-top: -3em;
+  }
+
+  .panel-d {
+    grid-column: 3/4;
+    grid-row: 3;
+  }
+  .panel-d img {
+    width: auto;
+    max-width: 290px;
+    margin-top: 165px;
+  }
+
+  .panel-e {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .panel-f {
+    grid-column: 5;
+    grid-row: 1;
+  }
+  .panel-g {
+    grid-column: 6;
+    grid-row: 1;
+  }
+}
+
+@supports (display: grid) {
+  .wrapper > * {
+    margin: 0;
+  }
+}
+
